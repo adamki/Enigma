@@ -29,6 +29,7 @@ class Enigma
 
 end
 
+
 # test = Enigma.new( ARGV[0] )
 # test.read_file
 # test.terminal_output
