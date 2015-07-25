@@ -26,8 +26,8 @@ class Enigma
     out.write(@input.read)
     out.close
   end
-
 end
+
 
 
 # test = Enigma.new( ARGV[0] )
