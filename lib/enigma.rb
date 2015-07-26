@@ -1,11 +1,13 @@
 require './key_generator'
-require './offset_calc'
+
 
 class Enigma
-  attr_accessor :output
+  attr_accessor :output, :key, :date
 
-  def initialize( output)
+  def initialize(output)
     @output = output
+    @key = KeyGenerator.new
+    @date = KeyGenerator.new
   end
 
   def read_file
@@ -15,10 +17,7 @@ class Enigma
   end
 
   def terminal_output
-    time = Time.new
-    time_actual = time.strftime("%d%m%y")
-    key = KeyGenerator.new(time_actual)
-    puts "Created '#{output}' with the key #{key.random} and date #{time_actual}"
+    puts "Created '#{output}' with the key #{key.random_5_digit_key} and date #{date.current_date}"
   end
 
   def output_file
@@ -30,7 +29,7 @@ end
 
 
 
-# test = Enigma.new( ARGV[0] )
+test = Enigma.new( ARGV[0] )
 # test.read_file
-# test.terminal_output
+test.terminal_output
 # test.output_file
