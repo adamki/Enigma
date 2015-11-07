@@ -1,4 +1,4 @@
-require './key_generator'  # ~> LoadError: cannot load such file -- ./key_generator
+require './key_generator'
 
 class OffsetCalculator
   attr_accessor :date, :key
@@ -15,10 +15,3 @@ class OffsetCalculator
     end
   end
 end
-
-# ~> LoadError
-# ~> cannot load such file -- ./key_generator
-# ~>
-# ~> /Users/adamki/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
-# ~> /Users/adamki/.rvm/rubies/ruby-2.2.1/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
-# ~> /Users/adamki/turing/module1/week_3/enigma/lib/offset_calc.rb:1:in `<main>'

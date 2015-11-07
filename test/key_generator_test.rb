@@ -11,12 +11,14 @@ class KeyGeneratorTest < Minitest::Test
     assert 5, key.random_5_digit_key.length
   end
 
-  def test_it_creates_a_new_key_each_time
+  def test_it_creates_a_unique_new_key_each_time
     key_1 = KeyGenerator.new
     key_2 = KeyGenerator.new
     refute_equal(key_1.random_5_digit_key, key_2.random_5_digit_key)
   end
 
+  def test_it_adds_offset_to_key
+  end
 
 
 
